@@ -62,16 +62,16 @@ def make_text(chains):
 
     words = []
 
-        for key, item in chains.items():
+    for key, item in chains.items():
 
-            if words == []:
-                words.extend([key[0], key[1]])
-                words.append(choice(item))
-            else:
-                words.append(words[-2])
-                words.append(choice(item))
+        if words == []:
+            words.extend([key[0], key[1]])
+            words.append(choice(item))
+        else:
+            words.append(words[-2])
+            words.append(choice(item))
 
-        return " ".join(words)
+    return " ".join(words)
 
     # your code goes here
 
