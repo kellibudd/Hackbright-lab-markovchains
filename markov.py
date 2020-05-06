@@ -10,7 +10,11 @@ def open_and_read_file(input_path):
     the file's contents as one string of text.
     """
 
-    # return text as string
+    contents = open(input_path).read()
+
+    text_string = contents.split()
+
+    return text_string
 
 def make_chains(text_string):
     """Take input text as string; return dictionary of Markov chains.
