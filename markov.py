@@ -40,9 +40,19 @@ def make_chains(text_string):
         >>> chains[('there','juanita')]
         [None]
     """
-
+  
     chains = {}
 
+    # loops through string of text until there are only 2 strings left
+    # creates keys in chains dict which are made up of two-word pairs
+    # creates new value for every word that follows the key (two-word pair)
+
+    for i in range(len(text_string)-2):
+
+        key = text_string[i], text_string[i + 1]
+        value = [text_string[i + 2]]
+
+        chains[key] = chains.get(key, []) + value
 
     return chains
 
